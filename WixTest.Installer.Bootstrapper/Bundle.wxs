@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Bundle Name="WixTest.Installer.Bootstrapper" Version="1.0.0.0" Manufacturer="WixTest" UpgradeCode="4d1c0e37-04c2-4a34-8568-4f44b7e737cc">
+		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
+
+		<Chain>
+            <MsiPackage InstallCondition="ShouldInstall_WordWatch_MSI=1"
+                            Id="WordWatch_MSI"
+                            SourceFile="$(var.WixTest.Installer.TargetPath)"
+                            Description="WixTest Portal"
+                            Visible="no"
+                            Vital="yes"
+                            EnableFeatureSelection="yes">
+                <MsiProperty Name='INSTALLFOLDER' Value='[INSTALLDIR]' />
+                <MsiProperty Name='DATADIR' Value='[DATADIR]' />
+            </MsiPackage>
+		</Chain>
+	</Bundle>
+</Wix>

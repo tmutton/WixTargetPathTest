@@ -1,1 +1,5 @@
 C:\Code\WixTest\WixTest\bin\Debug\WixTest.exe.config
+C:\Code\WixTest\WixTest\bin\Debug\WixTest.exe
+C:\Code\WixTest\WixTest\bin\Debug\WixTest.pdb
+C:\Code\WixTest\WixTest\obj\Debug\WixTest.exe
+C:\Code\WixTest\WixTest\obj\Debug\WixTest.pdb

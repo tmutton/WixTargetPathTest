@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="WixTest.Installer" Language="1033" Version="1.0.0.0" Manufacturer="Test Manufacturer" UpgradeCode="904e5a1c-110f-4216-acc1-9ed48b1e6ecc">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="WixTest.Installer" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="WixTest.Installer" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+    <Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+            <Component Id="ProductComponent" Guid="D275E97E-B895-46FB-9E23-C2063E4EECCA">
+                <File Id="file_DE4F2379D4B04E0589DAD4B0C18F42E8" Checksum="yes" KeyPath="yes" Source="..\WixTest\bin\Release\WixTest.exe" />
+            </Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
