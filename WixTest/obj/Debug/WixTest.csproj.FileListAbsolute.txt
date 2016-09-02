@@ -1,0 +1,1 @@
+C:\Code\WixTest\WixTest\bin\Debug\WixTest.exe.config
